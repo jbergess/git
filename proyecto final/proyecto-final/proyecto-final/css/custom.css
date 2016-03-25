@@ -1,0 +1,8 @@
+body {
+	background-color: #ededed;
+}
+
+div#control-box {
+	border: 1px solid #000;
+	width: 25%;
+}
