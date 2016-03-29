@@ -7,7 +7,7 @@ var Engine = Matter.Engine,
     Constraint = Matter.Constraint;
 
 // create a Matter.js engine
-var engine = Engine.create(document.body);
+var engine = Engine.create(document.getElementById("engine"));
 
 // set world gravity and timescale
 //engine.world.gravity.y = 1;
@@ -40,12 +40,11 @@ var valuestiff=document.getElementById("stiffness").innerHTML;
 var spring1 = Constraint.create({
 	pointA : {x:100, y:0},
 	bodyB : box, 
-	 
-	stiffness: valuestiff
+	//stiffness: valuestiff
 	//stiffness: 0.1
 
 });
-//spring1.lenght = 500;
+spring1.lenght = 500;
 
 
 var spring2 = Constraint.create({
@@ -53,7 +52,7 @@ var spring2 = Constraint.create({
 	bodyB : ball,
 	stiffness: 0.1
 });
-//spring2.lenght = 600;
+spring2.lenght = 600;
 
 // Vector test
 //var vector1 = {x:5, y:5};
@@ -65,7 +64,7 @@ mouseConstraint = MouseConstraint.create(engine);
 
 
 // add all of the bodies to the world
-World.add(engine.world, [box, box2, ball, ball2, ceiling, ground,left_wall,right_wall, mouseConstraint, spring1, spring2, vector1, vector2]);
+World.add(engine.world, [box, box2, ball, ball2, ceiling, ground,left_wall,right_wall, mouseConstraint, spring1, spring2]);
 
 // run the engine
 Engine.run(engine);
