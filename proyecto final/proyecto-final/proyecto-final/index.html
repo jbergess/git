@@ -30,20 +30,20 @@
 
 <body>
 	<h2 class="uk-text-center">Proyecto Final - Física para Ingeniería en Sistemas</h2>
-	<div id="control-box" class="uk-float-right uk-text-center">
+	<div id="control-box" class="uk-float-right uk-text-align-left">
 		<h2></h2>
 		<form class="uk-form1">
 			<fieldset data-uk-margin>
 				 <legend>World controls</legend>
 				<label>Gravity: </label>
-		        <input type="range" min="-1" max="1" value="0" step="1" onchange="showValue(this.value)" />
+		        <input type="range" min="-1" max="1" value="0" step="1" onchange="showGravityValue(this.value)" />
 				<span id="range">0</span>
+				<br/>
+				<label>Stiffness (left spring): </label>
+		        <input type="range" min="0" max="1" value="0.5" step="0.01" onchange="showStiffnessValue(this.value)" />
+				<span id="stiffness">0</span>
 		    </fieldset>
-	    </form >
-	  
-    	 
-
-	
+	    </form >		
 	</div>
 	
 	    
@@ -51,11 +51,11 @@
 		<script src="js/fisik.js"></script>
 	</div>
 	<footer>
-	integrantes:
+		Integrantes:
 		<ul>
-		<li>Edwin</li>
-		<li>Marcelo</li> 
-		<li>Kenneth</li>
+			<li>Edwin</li>
+			<li>Marcelo</li> 
+			<li>Kenneth</li>
 		</ul>
 	</footer>
 </body>

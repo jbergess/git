@@ -45,7 +45,7 @@ var spring1 = Constraint.create({
 	//stiffness: 0.1
 
 });
-spring1.lenght = 500;
+//spring1.lenght = 500;
 
 
 var spring2 = Constraint.create({
@@ -53,11 +53,11 @@ var spring2 = Constraint.create({
 	bodyB : ball,
 	stiffness: 0.1
 });
-spring2.lenght = 600;
+//spring2.lenght = 600;
 
 // Vector test
-var vector1 = {x:5, y:5};
-var vector2 = {x:4, y:8};
+//var vector1 = {x:5, y:5};
+//var vector2 = {x:4, y:8};
 
 
 // add a mouse controlled constraint for mouse input events
