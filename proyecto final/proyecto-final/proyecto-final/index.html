@@ -34,14 +34,34 @@
 		<h2></h2>
 		<form class="uk-form1">
 			<fieldset data-uk-margin>
-				 <legend>World controls</legend>
-				<label>Gravity: </label>
+				<legend>Controles del mundo</legend>
+				<label>Gravedad: </label>
 		        <input type="range" min="-1" max="1" value="0" step="1" onchange="showGravityValue(this.value)" />
 				<span id="range">0</span>
 				<br/>
-				<label>Stiffness (left spring): </label>
-		        <input type="range" min="0" max="0.1" value="0.05" step="0.01" onchange="showStiffnessValue(this.value)" />
-				<span id="stiffness">0.05</span>
+				<label>Escala de tiempo: </label>
+		        <input type="range" min="0.1" max="1.5" value="1" step="0.1" onchange="showTimeScaleValue(this.value)" />
+				<span id="timescale">1</span>
+		    </fieldset>
+		    <fieldset data-uk-margin>
+		    	<legend>Controles de elasticidad</legend>
+				<label>Izquierdo: </label>
+		        <input type="range" min="0" max="1" value="0" step="0.1" onchange="showStiffnessValueLeft(this.value)" />
+				<span id="stiffnessLeft">0</span>
+				<br/>
+				<label>Derecho: </label>
+		        <input type="range" min="0" max="1" value="0" step="0.1" onchange="showStiffnessValueRight(this.value)" />
+				<span id="stiffnessRight">0</span>
+		    </fieldset>
+		    <fieldset data-uk-margin>
+		    	<legend>Masa y densidad</legend>
+				<label>Masa caja resorte: </label>
+		        <input type="range" min="1" max="50" value="1" step="1" onchange="showMassValueBox(this.value)" />
+				<span id="massBox">1</span>
+				<br/>
+				<label>Masa esfera resorte: </label>
+		        <input type="range" min="1" max="50" value="0" step="1" onchange="showMassValueCircle(this.value)" />
+				<span id="massBall">1</span>
 		    </fieldset>
 	    </form >		
 	</div>
@@ -52,12 +72,15 @@
 	</div>
 
 	<footer>
-		Integrantes:
-		<ul>
-			<li>Edwin</li>
-			<li>Marcelo</li> 
-			<li>Kenneth</li>
-		</ul>
+		<div class="uk-panel">
+			Integrantes:
+			<ul class="uk-list">
+				<li>Edwin</li>
+				<li>Marcelo</li> 
+				<li>Kenneth</li>
+			</ul>
+		</div>
+		
 	</footer>
 </body>
 </html>
